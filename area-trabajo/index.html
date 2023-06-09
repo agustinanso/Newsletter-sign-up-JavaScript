@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <!-- script -->
+    <script defer type="module" src="./main.js"></script>
+    <title>document</title>
+  </head>
+  <body>
+    <section
+      id="sectionPrincipal"
+      class="bg-[#242742] w-full h-screen flex font-[roboto] text-[18px]">
+      <!-- Div Padre -->
+      <!-- transicion de flex a hidden -->
+      <div
+        id="principal"
+        class="flex bg-white w-full flex-col lg:flex-row lg:p-6 lg:m-auto lg:gap-16 lg:h-auto lg:w-auto lg:rounded-[40px] lg:shadow-lg lg:shadow-black duration-200 transition ease-in-out">
+        <!-- Imagenes -->
+
+        <div class="w-full lg:flex lg:order-2">
+          <img src="./public/illustration-sign-up-mobile.svg" class="w-full lg:hidden" />
+          <img src="./public/illustration-sign-up-desktop.svg" class="hidden lg:flex lg:w-full" />
+        </div>
+
+        <!-- Titulo y textos -->
+        <div class="mb-9 lg:order-1 lg:m-11 lg:w-full mt-8">
+          <div class="p-6 w-full mx-auto lg:w-full">
+            <p class="text-5xl font-bold text-[#242742] lg:text-7xl lg:w-full">Stay Updated!</p>
+            <p class="mt-10 text-[20px]">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+          </div>
+          <!-- Lista con iconos  -->
+          <div class="flex-col p-6 lg:m-auto lg:w-full">
+            <div class="flex m-auto mt-5">
+              <img src="./public/icon-list.svg" class="w-9 h-9" />
+              <p class="ml-[10px] w-10/12">Product discovery and building what matters</p>
+            </div>
+            <div class="flex m-auto mt-10 lg:mt-6">
+              <img src="./public/icon-list.svg" class="w-9 h-9" />
+              <p class="ml-[10px] w-10/12 font-normal">Measuring to ensure updates are a success</p>
+            </div>
+            <div class="flex m-auto mt-10 lg:mt-6">
+              <img src="./public/icon-list.svg" class="w-9 h-9" />
+              <p class="ml-[10px] w-10/12">And much more!</p>
+            </div>
+          </div>
+
+          <!-- Formulario -->
+          <form id="formulario" class="p-6 lg:flex lg:mt-10">
+            <div class="lg:w-full">
+              <div class="flex w-full m-auto justify-between">
+                <p class="font-[roboto] font-bold text-[#242742] text-[16px]">Email address</p>
+                <p id="alerta" class="relative text-[16px] font-bold text-[#ff6257] hidden">
+                  Valid email required
+                </p>
+                <p id="valido" class="relative text-[16px] font-bold text-emerald-600 hidden">
+                  Success!
+                </p>
+              </div>
+              <!-- input mail -->
+              <div class="m-auto justify-center mt-[10px] mx-auto">
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="email@example.com"
+                  class="border border-[#9294a0] w-full rounded-lg pt-5 pb-5 px-6 focus:outline-none lg:pt-6 lg:pb-6" />
+              </div>
+              <!-- Boton submit -->
+              <div class="m-auto justify-center mt-[25px] mx-auto mb-[25px]">
+                <button
+                  id="submitt"
+                  class="w-full rounded-lg pt-5 pb-5 px-6 bg-[#242742] text-white hover:bg-gradient-to-r hover:from-[#ff6257] hover:to-[#9378b0] lg:pt-7 lg:pb-7 hover:lg:shadow-lg hover:lg:shadow-[#ff6257]">
+                  Subscribe to monthly newsletter
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Cartel agradecimiento -->
+      <div
+        id="secundaria"
+        class="bg-white m-auto lg:justify-center flex-col lg:px-6 lg:py-6 lg:m-auto lg:w-3/12 lg:rounded-[40px] w-full duration-200 hidden transition-opacity ease-in-out">
+        <div class="lg:w-full p-8 mt-32 lg:mt-0">
+          <div>
+            <img src="./public/icon-success.svg" />
+          </div>
+          <div class="lg:mt-14 lg:text-left mt-16">
+            <p class="lg:text-6xl text-6xl font-bold font-[roboto] text-[#242742] lg:w-4/5">
+              Thanks for subscribing!
+            </p>
+            <p class="font-[roboto] lg:w-full w-5/6 mt-10">
+              A confirmation email has been sent to
+              <span class="font-bold">ash@example.com.</span> Please open it and click the button
+              inside to confirm your subscription
+            </p>
+          </div>
+        </div>
+        <div class="m-auto mx-auto p-6 lg:mt-0 mt-72">
+          <button
+            id="dismiss"
+            class="w-full rounded-lg pt-5 pb-5 px-6 bg-[#242742] text-white hover:bg-gradient-to-r hover:from-[#ff6257] hover:to-[#9378b0] lg:pt-7 lg:pb-7 hover:lg:shadow-lg hover:lg:shadow-black duration-200 transition ease-in-out">
+            Dismiss message
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
